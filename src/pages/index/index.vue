@@ -4,14 +4,22 @@
         <view>
             <text class="title">{{title}}</text>
         </view>
+
+        <button @click="navigateToPlugin">点击跳转插件页</button>
     </view>
 </template>
 
 <script>
     export default {
         setup() {
+            const navigateToPlugin = () => {
+                uni.navigateTo({
+                    url: 'plugin://myPlugin/hello'
+                })
+            }
             return {
-                title: 'hello'
+                title: 'hello',
+                navigateToPlugin
             }
         }
     }

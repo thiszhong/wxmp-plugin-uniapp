@@ -58,6 +58,14 @@
 		"setting": {
 			"urlCheck": false
 		},
+		// #ifndef MP-WXPLUGIN
+		"plugins" : {
+			"myPlugin" : {
+				"version" : "dev",
+				"provider" : ""
+			}
+		},
+		// #endif
 		"usingComponents": true
 	},
 	"mp-alipay" : {
