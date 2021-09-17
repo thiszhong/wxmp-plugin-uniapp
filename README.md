@@ -9,6 +9,7 @@ npm install
 
 ### 开发
 ```
+// 自行补充 src/manifest.json/mp-weixin/plugins/myPlugin/provider 当前开发小程序 appId
 // 需要同时运行两个命令：
 npm run dev:mp-weixin
 npm run dev:wxplugin
@@ -31,4 +32,4 @@ npm run build:wxplugin
 
 2. `getApp is not a function`
 
-调试小程序跳转到插件页面后控制台报错，暂无解决方法，不确定是否影响功能。
+调试小程序跳转到插件页面后控制台报错，暂无解决方法，不确定是否影响功能。[视频](./example/screenshot/video.mp4)
