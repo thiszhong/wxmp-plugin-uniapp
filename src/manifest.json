@@ -62,7 +62,7 @@
 		"plugins" : {
 			"myPlugin" : {
 				"version" : "dev",
-				"provider" : ""
+				"provider" : "wxe656a5b9f98c1811"
 			}
 		},
 		// #endif

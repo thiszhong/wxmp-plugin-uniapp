@@ -2,7 +2,7 @@
   "miniprogramRoot": "miniprogram/miniprogram/",
   "pluginRoot": "miniprogram/plugin/",
   "compileType": "plugin",
-  "appid": "",
+  "appid": "wxe656a5b9f98c1811",
   "projectname": "wxmp-plugin",
   "description": "微信小程序插件",
   "setting": {
@@ -38,7 +38,10 @@
     "packNpmManually": false,
     "packNpmRelationList": [],
     "minifyWXSS": false,
-    "showES6CompileOption": false
+    "disableUseStrict": false,
+    "showES6CompileOption": false,
+    "useCompilerPlugins": false,
+    "minifyWXML": true
   },
   "condition": {}
 }

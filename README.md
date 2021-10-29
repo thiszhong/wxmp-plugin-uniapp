@@ -1,4 +1,6 @@
-# uniapp + vue3 开发微信小程序插件
+# uniapp + vue2 开发微信小程序插件
+
+`uniapp` 插件打包当前还不支持 `vue 3`，[参考文档 https://ask.dcloud.net.cn/article/39290](https://ask.dcloud.net.cn/article/39290)
 
 <img src="./example/screenshot/plugin.jpg" width="200px">
 
@@ -26,10 +28,4 @@ npm run build:wxplugin
 
 ### 问题
 
-1. `App is not a function`
-
-`main.js` 中 `app.mount()` 需要条件编译，插件条件下不能加载。
-
-2. `getApp is not a function`
-
-调试小程序跳转到插件页面后控制台报错，暂无解决方法，不确定是否影响功能。[视频](./example/screenshot/video.mp4)
+1. 组件的 .sync 在插件页面中更新无效

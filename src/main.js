@@ -1,19 +1,17 @@
-import {
-	createApp
-} from 'vue'
-import App from './App.vue'
+import Vue from 'vue'
+import App from './App'
 
+// 小程序插件中的组件，在整个项目中没有调用的话，需要在这里引用一下，否则不会被打包
 // #ifdef MP-WXPLUGIN
 import Avatar from './plugin/components/avatar/avatar.vue'
+Vue.component('avatar', Avatar)
 // #endif
 
-const app = createApp(App);
+Vue.config.productionTip = false
 
-// #ifdef MP-WXPLUGIN
-app.component('avatar', Avatar)
-// #endif
+App.mpType = 'app'
 
-// 插件加这个的话会报 App is not a function
-// #ifndef MP-WXPLUGIN
-app.mount()
-// #endif
+const app = new Vue({
+  ...App
+})
+app.$mount()

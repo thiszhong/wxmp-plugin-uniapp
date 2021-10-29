@@ -2,8 +2,8 @@ const path = require('path');
 const CopyPlugin = require("copy-webpack-plugin");
 // const argv = require('yargs').argv;
 
-process.env.UNI_USING_VUE3 = true
-process.env.UNI_USING_VUE3_OPTIONS_API = true
+// process.env.UNI_USING_VUE3 = true
+// process.env.UNI_USING_VUE3_OPTIONS_API = true
 
 const plugins = [];
 
