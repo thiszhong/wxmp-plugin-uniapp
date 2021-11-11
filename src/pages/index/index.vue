@@ -8,15 +8,20 @@
 		<button @click="navigateToPlugin">点击跳转插件页</button>
 
     <TestSync :visible.sync="test" />
+
+    <TestEmitKebab @button-click="aaa" />
+
 	</view>
 </template>
 
 <script>
 import TestSync from '../../plugin/components/test-sync/test-sync'
+import TestEmitKebab from '../../plugin/components/test-emit-kebab/test-emit-kebab'
 
 export default {
 	components: {
-    TestSync
+    TestSync,
+		TestEmitKebab
   },
 	data() {
 		return {
@@ -29,7 +34,12 @@ export default {
 			uni.navigateTo({
 				url: "plugin://myPlugin/hello",
 			});
-		}
+		},
+		aaa() {
+      uni.showToast({
+        title: '收到'
+      })
+    }
 	}
 };
 </script>

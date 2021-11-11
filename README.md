@@ -21,11 +21,9 @@ npm run dev:wxplugin
 
 ### 打包
 ```
-// 依次运行
-npm run build:mp-weixin
 npm run build:wxplugin
 ```
 
 ### 问题
 
-1. 组件的 .sync 在插件页面中更新无效
+暂无
