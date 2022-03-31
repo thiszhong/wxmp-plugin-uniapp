@@ -1,16 +1,5 @@
 {
-	// #ifdef MP-WXPLUGIN
-	"pages": [ // 插件
-		{
-			"path": "plugin/pages/hello",
-			"style": {
-				"navigationBarTitleText": "Hello"
-			}
-		}
-	],
-	// #endif
-	// #ifndef MP-WXPLUGIN
-	"pages": [ // 非插件，即调试插件的小程序
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
 		{
 			"path": "pages/index/index",
 			"style": {
@@ -18,7 +7,6 @@
 			}
 		}
 	],
-	// #endif
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "uni-app",
