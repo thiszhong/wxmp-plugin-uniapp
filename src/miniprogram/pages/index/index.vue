@@ -1,16 +1,23 @@
+<script setup lang="ts">
+import { ref } from 'vue'
+const title = ref('Hello')
+
+const navigateToPlugin = () => {
+  uni.navigateTo({
+    url: 'plugin://myPlugin/hello',
+  })
+}
+</script>
+
 <template>
   <view class="content">
     <image class="logo" src="/static/logo.png" />
     <view class="text-area">
       <text class="title">{{ title }}</text>
     </view>
+    <button @click="navigateToPlugin">点击跳转插件页</button>
   </view>
 </template>
-
-<script setup lang="ts">
-import { ref } from 'vue'
-const title = ref('Hello')
-</script>
 
 <style>
 .content {

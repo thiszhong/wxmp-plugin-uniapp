@@ -1,6 +1,7 @@
 {
   "name": "uni-preset-vue",
-  "version": "0.0.0",
+  "version": "2.0.0",
+  "private": true,
   "scripts": {
     "dev:app": "uni -p app",
     "dev:custom": "uni -p",
@@ -12,7 +13,8 @@
     "dev:mp-lark": "uni -p mp-lark",
     "dev:mp-qq": "uni -p mp-qq",
     "dev:mp-toutiao": "uni -p mp-toutiao",
-    "dev:mp-weixin": "uni -p mp-weixin",
+    "dev:mp-weixin": "cross-env UNI_OUTPUT_DIR=dist/dev/mp-wx-plugin/miniprogram uni -p mp-weixin",
+    "dev:mp-wx-plugin": "cross-env UNI_OUTPUT_DIR=dist/dev/mp-wx-plugin/plugin yarn dev:custom mp-wx-plugin --plugin",
     "dev:quickapp-webview": "uni -p quickapp-webview",
     "dev:quickapp-webview-huawei": "uni -p quickapp-webview-huawei",
     "dev:quickapp-webview-union": "uni -p quickapp-webview-union",
@@ -26,7 +28,8 @@
     "build:mp-lark": "uni build -p mp-lark",
     "build:mp-qq": "uni build -p mp-qq",
     "build:mp-toutiao": "uni build -p mp-toutiao",
-    "build:mp-weixin": "uni build -p mp-weixin",
+    "build:mp-weixin": "cross-env UNI_OUTPUT_DIR=dist/build/mp-wx-plugin/miniprogram uni build -p mp-weixin",
+    "build:mp-wx-plugin": "cross-env UNI_OUTPUT_DIR=dist/build/mp-wx-plugin/plugin yarn build:custom mp-wx-plugin --plugin && npm run build:mp-weixin",
     "build:quickapp-webview": "uni build -p quickapp-webview",
     "build:quickapp-webview-huawei": "uni build -p quickapp-webview-huawei",
     "build:quickapp-webview-union": "uni build -p quickapp-webview-union"
@@ -53,7 +56,26 @@
     "@dcloudio/uni-automator": "3.0.0-alpha-3040320220325006",
     "@dcloudio/uni-cli-shared": "3.0.0-alpha-3040320220325006",
     "@dcloudio/vite-plugin-uni": "3.0.0-alpha-3040320220325006",
+    "cross-env": "^7.0.3",
     "typescript": "^4.6.3",
-    "vite": "^2.9.0"
+    "vite": "^2.9.0",
+    "vite-plugin-static-copy": "^0.4.1"
+  },
+  "browserslist": [
+    "Android > 4.4",
+    "ios >= 10.0"
+  ],
+  "uni-app": {
+    "scripts": {
+      "mp-wx-plugin": {
+        "title": "微信小程序插件",
+        "env": {
+          "UNI_PLATFORM": "mp-weixin"
+        },
+        "define": {
+          "MP-WX-PLUGIN": true
+        }
+      }
+    }
   }
 }

@@ -1,29 +1,31 @@
-# uniapp + vue2 开发微信小程序插件
-
-`uniapp` 插件打包当前还不支持 `vue 3`，[参考文档 https://ask.dcloud.net.cn/article/39290](https://ask.dcloud.net.cn/article/39290)
+# uniapp + vue3 开发微信小程序插件
 
 <img src="./example/screenshot/plugin.jpg" width="200px">
 
 ## Project setup
+
 ```
 npm install
 ```
 
 ### 开发
-```
-// 自行补充 src/manifest.json/mp-weixin/plugins/myPlugin/provider 当前开发小程序 appId
-// 需要同时运行两个命令：
-npm run dev:mp-weixin
-npm run dev:wxplugin
 
-// 然后用小程序开发者工具打开本项目根目录即可预览
+```
+// 自行补充 src/manifest.json/mp-weixin/plugins/myPlugin/provider、project.config.json 当前开发小程序 appId
+// 需要运行两个命令（起两个命令行窗口）：
+npm run dev:mp-weixin
+npm run dev:mp-wx-plugin
+
+// 然后用小程序开发者工具打开 dist/dev/mp-wx-plugin 目录即可开发预览
 ```
 
 ### 打包
+
 ```
-npm run build:wxplugin
+// 打包产物 dist/build/mp-wx-plugin
+npm run build:mp-wx-plugin
 ```
 
 ### 问题
 
-暂无
+- getApp is not a function 貌似还是不支持 vue3
