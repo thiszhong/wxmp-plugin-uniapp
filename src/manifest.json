@@ -58,7 +58,7 @@
 		"setting": {
 			"urlCheck": false
 		},
-		// #ifndef MP-WXPLUGIN
+		// #ifndef MP-WX-PLUGIN
 		"plugins" : {
 			"myPlugin" : {
 				"version" : "dev",

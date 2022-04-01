@@ -2,7 +2,7 @@ import Vue from 'vue'
 import App from './App'
 
 // 小程序插件中的组件，在整个项目中没有调用的话，需要在这里引用一下，否则不会被打包
-// #ifdef MP-WXPLUGIN
+// #ifdef MP-WX-PLUGIN
 import Avatar from './plugin/components/avatar/avatar.vue'
 Vue.component('avatar', Avatar)
 // #endif

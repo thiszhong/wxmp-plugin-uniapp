@@ -1,5 +1,5 @@
 {
-  "name": "wxmp-plugin-uniapp",
+  "name": "wx-mp-plugin-uniapp",
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -15,7 +15,7 @@
     "build:mp-qq": "cross-env NODE_ENV=production UNI_PLATFORM=mp-qq vue-cli-service uni-build",
     "build:mp-toutiao": "cross-env NODE_ENV=production UNI_PLATFORM=mp-toutiao vue-cli-service uni-build",
     "build:mp-weixin": "cross-env NODE_ENV=production UNI_PLATFORM=mp-weixin vue-cli-service uni-build",
-    "build:wxplugin": "cross-env NODE_ENV=production uniapp-cli custom mp-wxplugin --plugin byn-wxplugin && npm run build:mp-weixin",
+    "build:mp-wx-plugin": "cross-env NODE_ENV=production uniapp-cli custom mp-wx-plugin --plugin mp-wx-plugin && npm run build:mp-weixin",
     "build:quickapp-native": "cross-env NODE_ENV=production UNI_PLATFORM=quickapp-native vue-cli-service uni-build",
     "build:quickapp-webview": "cross-env NODE_ENV=production UNI_PLATFORM=quickapp-webview vue-cli-service uni-build",
     "build:quickapp-webview-huawei": "cross-env NODE_ENV=production UNI_PLATFORM=quickapp-webview-huawei vue-cli-service uni-build",
@@ -30,7 +30,7 @@
     "dev:mp-qq": "cross-env NODE_ENV=development UNI_PLATFORM=mp-qq vue-cli-service uni-build --watch",
     "dev:mp-toutiao": "cross-env NODE_ENV=development UNI_PLATFORM=mp-toutiao vue-cli-service uni-build --watch",
     "dev:mp-weixin": "cross-env NODE_ENV=development UNI_PLATFORM=mp-weixin vue-cli-service uni-build --watch",
-    "dev:wxplugin": "cross-env NODE_ENV=development uniapp-cli custom mp-wxplugin --plugin byn-wxplugin",
+    "dev:mp-wx-plugin": "cross-env NODE_ENV=development uniapp-cli custom mp-wx-plugin --plugin mp-wx-plugin",
     "dev:quickapp-native": "cross-env NODE_ENV=development UNI_PLATFORM=quickapp-native vue-cli-service uni-build --watch",
     "dev:quickapp-webview": "cross-env NODE_ENV=development UNI_PLATFORM=quickapp-webview vue-cli-service uni-build --watch",
     "dev:quickapp-webview-huawei": "cross-env NODE_ENV=development UNI_PLATFORM=quickapp-webview-huawei vue-cli-service uni-build --watch",
@@ -44,21 +44,21 @@
     "test:mp-weixin": "cross-env UNI_PLATFORM=mp-weixin jest -i"
   },
   "dependencies": {
-    "@dcloudio/uni-app-plus": "^2.0.0-alpha-32920211109002",
-    "@dcloudio/uni-h5": "^2.0.0-alpha-32920211109002",
+    "@dcloudio/uni-app-plus": "^2.0.1-33920220314002",
+    "@dcloudio/uni-h5": "^2.0.1-33920220314002",
     "@dcloudio/uni-helper-json": "*",
-    "@dcloudio/uni-i18n": "^2.0.0-alpha-32920211109002",
-    "@dcloudio/uni-mp-360": "^2.0.0-alpha-32920211109002",
-    "@dcloudio/uni-mp-alipay": "^2.0.0-alpha-32920211109002",
-    "@dcloudio/uni-mp-baidu": "^2.0.0-alpha-32920211109002",
-    "@dcloudio/uni-mp-kuaishou": "^2.0.0-alpha-32920211109002",
-    "@dcloudio/uni-mp-qq": "^2.0.0-alpha-32920211109002",
-    "@dcloudio/uni-mp-toutiao": "^2.0.0-alpha-32920211109002",
-    "@dcloudio/uni-mp-vue": "^2.0.0-alpha-32920211109002",
-    "@dcloudio/uni-mp-weixin": "^2.0.0-alpha-32920211109002",
-    "@dcloudio/uni-quickapp-native": "^2.0.0-alpha-32920211109002",
-    "@dcloudio/uni-quickapp-webview": "^2.0.0-alpha-32920211109002",
-    "@dcloudio/uni-stat": "^2.0.0-alpha-32920211109002",
+    "@dcloudio/uni-i18n": "^2.0.1-33920220314002",
+    "@dcloudio/uni-mp-360": "^2.0.1-33920220314002",
+    "@dcloudio/uni-mp-alipay": "^2.0.1-33920220314002",
+    "@dcloudio/uni-mp-baidu": "^2.0.1-33920220314002",
+    "@dcloudio/uni-mp-kuaishou": "^2.0.1-33920220314002",
+    "@dcloudio/uni-mp-qq": "^2.0.1-33920220314002",
+    "@dcloudio/uni-mp-toutiao": "^2.0.1-33920220314002",
+    "@dcloudio/uni-mp-vue": "^2.0.1-33920220314002",
+    "@dcloudio/uni-mp-weixin": "^2.0.1-33920220314002",
+    "@dcloudio/uni-quickapp-native": "^2.0.1-33920220314002",
+    "@dcloudio/uni-quickapp-webview": "^2.0.1-33920220314002",
+    "@dcloudio/uni-stat": "^2.0.1-33920220314002",
     "@vue/shared": "^3.0.0",
     "core-js": "^3.6.5",
     "flyio": "^0.6.2",
@@ -68,16 +68,16 @@
   },
   "devDependencies": {
     "@dcloudio/types": "*",
-    "@dcloudio/uni-automator": "^2.0.0-alpha-32920211109002",
-    "@dcloudio/uni-cli-i18n": "^2.0.0-alpha-32920211109002",
-    "@dcloudio/uni-cli-shared": "^2.0.0-alpha-32920211109002",
-    "@dcloudio/uni-migration": "^2.0.0-alpha-32920211109002",
-    "@dcloudio/uni-template-compiler": "^2.0.0-alpha-32920211109002",
-    "@dcloudio/vue-cli-plugin-hbuilderx": "^2.0.0-alpha-32920211109002",
-    "@dcloudio/vue-cli-plugin-uni": "^2.0.0-alpha-32920211109002",
-    "@dcloudio/vue-cli-plugin-uni-optimize": "^2.0.0-alpha-32920211109002",
-    "@dcloudio/webpack-uni-mp-loader": "^2.0.0-alpha-32920211109002",
-    "@dcloudio/webpack-uni-pages-loader": "^2.0.0-alpha-32920211109002",
+    "@dcloudio/uni-automator": "^2.0.1-33920220314002",
+    "@dcloudio/uni-cli-i18n": "^2.0.1-33920220314002",
+    "@dcloudio/uni-cli-shared": "^2.0.1-33920220314002",
+    "@dcloudio/uni-migration": "^2.0.1-33920220314002",
+    "@dcloudio/uni-template-compiler": "^2.0.1-33920220314002",
+    "@dcloudio/vue-cli-plugin-hbuilderx": "^2.0.1-33920220314002",
+    "@dcloudio/vue-cli-plugin-uni": "^2.0.1-33920220314002",
+    "@dcloudio/vue-cli-plugin-uni-optimize": "^2.0.1-33920220314002",
+    "@dcloudio/webpack-uni-mp-loader": "^2.0.1-33920220314002",
+    "@dcloudio/webpack-uni-pages-loader": "^2.0.1-33920220314002",
     "@vue/cli-plugin-babel": "~4.5.0",
     "@vue/cli-service": "~4.5.0",
     "@vue/compiler-sfc": "^3.0.0",
@@ -96,13 +96,13 @@
   ],
   "uni-app": {
     "scripts": {
-      "mp-wxplugin": {
+      "mp-wx-plugin": {
         "title": "微信小程序插件",
         "env": {
           "UNI_PLATFORM": "mp-weixin"
         },
         "define": {
-          "MP-WXPLUGIN": true
+          "MP-WX-PLUGIN": true
         }
       }
     }

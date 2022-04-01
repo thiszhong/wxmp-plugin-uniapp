@@ -1,9 +1,9 @@
 {
-  "miniprogramRoot": "miniprogram/miniprogram/",
-  "pluginRoot": "miniprogram/plugin/",
+  "miniprogramRoot": "miniprogram/",
+  "pluginRoot": "plugin/",
   "compileType": "plugin",
   "appid": "wxe656a5b9f98c1811",
-  "projectname": "wxmp-plugin",
+  "projectname": "wx-mp-plugin",
   "description": "微信小程序插件",
   "setting": {
     "urlCheck": true,

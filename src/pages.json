@@ -1,6 +1,7 @@
 {
-	// #ifdef MP-WXPLUGIN
-	"pages": [ // 插件
+	// #ifdef MP-WX-PLUGIN
+	// 插件
+	"pages": [
 		{
 			"path": "plugin/pages/hello",
 			"style": {
@@ -9,8 +10,10 @@
 		}
 	],
 	// #endif
-	// #ifndef MP-WXPLUGIN
-	"pages": [ // 非插件，即调试插件的小程序
+
+	// #ifndef MP-WX-PLUGIN
+	// 非插件，即调试插件的小程序
+	"pages": [
 		{
 			"path": "pages/index/index",
 			"style": {
