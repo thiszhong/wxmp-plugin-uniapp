@@ -1,6 +1,7 @@
 {
   "publicComponents": {
-    "avatar": "plugin/components/avatar/avatar"
+    "avatar": "plugin/components/avatar/avatar",
+    "testComp": "plugin/components/comp/comp"
   },
   "pages": {
     "hello": "plugin/pages/hello"

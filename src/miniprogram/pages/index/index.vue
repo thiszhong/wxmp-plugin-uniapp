@@ -1,12 +1,12 @@
 <script setup lang="ts">
-import { ref } from 'vue'
-const title = ref('Hello')
+import { ref } from "vue";
+const title = ref("Hello");
 
 const navigateToPlugin = () => {
   uni.navigateTo({
-    url: 'plugin://myPlugin/hello',
-  })
-}
+    url: "plugin://myPlugin/hello",
+  });
+};
 </script>
 
 <template>
@@ -16,6 +16,8 @@ const navigateToPlugin = () => {
       <text class="title">{{ title }}</text>
     </view>
     <button @click="navigateToPlugin">点击跳转插件页</button>
+
+    <test-component test="111" :test2="222"></test-component>
   </view>
 </template>
 

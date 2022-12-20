@@ -28,4 +28,4 @@ npm run build:mp-wx-plugin
 
 ### 问题
 
-- getApp is not a function 貌似还是不支持 vue3
+- 插件组件的 props 无效：小程序加载插件组件的时候无法正确传递 props
